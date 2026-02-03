@@ -10,12 +10,14 @@ import {
   BarChart3,
   Settings,
   Scissors,
-  UserCircle
+  UserCircle,
+  RefreshCw
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navigation = [
   { name: "Календар", href: "/dashboard", icon: Calendar },
+  { name: "Повторні візити", href: "/dashboard/repeat-visits", icon: RefreshCw },
   { name: "Клієнти", href: "/dashboard/clients", icon: Users },
   { name: "Послуги", href: "/dashboard/services", icon: Scissors },
   { name: "Співробітники", href: "/dashboard/staff", icon: UserCircle },

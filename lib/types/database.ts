@@ -61,6 +61,8 @@ export interface Service {
   price: number
   cost?: number
   is_active: boolean
+  repeat_interval_days?: number
+  sms_reminder_days_before?: number
   created_at: string
   updated_at: string
 }
@@ -143,4 +145,31 @@ export interface Transaction {
   description?: string
   created_by?: string
   created_at: string
+}
+
+export interface RepeatVisitReminder {
+  id: string
+  salon_id: string
+  client_id: string
+  last_appointment_id: string
+  service_id: string
+  staff_id?: string
+  last_visit_date: string
+  recommended_date: string
+  status: 'pending' | 'sms_sent' | 'called' | 'scheduled' | 'completed' | 'cancelled'
+  sms_sent_at?: string
+  email_sent_at?: string
+  called_at?: string
+  new_appointment_id?: string
+  notes?: string
+  created_at: string
+  updated_at: string
+}
+
+export interface RepeatVisitReminderWithRelations extends RepeatVisitReminder {
+  client?: Client
+  service?: Service
+  staff?: StaffMember
+  last_appointment?: Appointment
+  new_appointment?: Appointment
 }

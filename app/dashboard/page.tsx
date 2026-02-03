@@ -12,10 +12,10 @@ const mockStaff: StaffMember[] = [
     id: "1",
     salon_id: "salon-1",
     first_name: "Анна",
-    last_name: "Иванова",
-    phone: "+7 (999) 123-45-67",
+    last_name: "Коваль",
+    phone: "+380 (67) 123-45-67",
     email: "anna@example.com",
-    specialization: "Мастер по маникюру",
+    specialization: "Майстер манікюру",
     color: "#3b82f6",
     is_active: true,
     work_schedule: {},
@@ -27,11 +27,11 @@ const mockStaff: StaffMember[] = [
   {
     id: "2",
     salon_id: "salon-1",
-    first_name: "Мария",
-    last_name: "Петрова",
-    phone: "+7 (999) 234-56-78",
+    first_name: "Марія",
+    last_name: "Петренко",
+    phone: "+380 (50) 234-56-78",
     email: "maria@example.com",
-    specialization: "Парикмахер",
+    specialization: "Перукар",
     color: "#ec4899",
     is_active: true,
     work_schedule: {},
@@ -43,10 +43,10 @@ const mockStaff: StaffMember[] = [
   {
     id: "3",
     salon_id: "salon-1",
-    first_name: "Елена",
-    last_name: "Сидорова",
-    phone: "+7 (999) 345-67-89",
-    email: "elena@example.com",
+    first_name: "Олена",
+    last_name: "Сидоренко",
+    phone: "+380 (63) 345-67-89",
+    email: "olena@example.com",
     specialization: "Косметолог",
     color: "#8b5cf6",
     is_active: true,
@@ -62,10 +62,10 @@ const mockClients: Client[] = [
   {
     id: "1",
     salon_id: "salon-1",
-    first_name: "Ольга",
-    last_name: "Смирнова",
-    phone: "+7 (999) 111-11-11",
-    email: "olga@example.com",
+    first_name: "Олена",
+    last_name: "Коваленко",
+    phone: "+380 (67) 111-22-33",
+    email: "olena@example.com",
     loyalty_points: 150,
     loyalty_tier: "gold",
     total_spent: 15000,
@@ -76,9 +76,9 @@ const mockClients: Client[] = [
   {
     id: "2",
     salon_id: "salon-1",
-    first_name: "Наталья",
-    last_name: "Козлова",
-    phone: "+7 (999) 222-22-22",
+    first_name: "Наталія",
+    last_name: "Шевченко",
+    phone: "+380 (50) 222-33-44",
     email: "natalia@example.com",
     loyalty_points: 80,
     loyalty_tier: "silver",
@@ -93,8 +93,8 @@ const mockServices: Service[] = [
   {
     id: "1",
     salon_id: "salon-1",
-    name: "Маникюр классический",
-    description: "Классический маникюр с покрытием",
+    name: "Манікюр класичний",
+    description: "Класичний манікюр з покриттям",
     duration: 60,
     price: 1500,
     is_active: true,
@@ -104,8 +104,8 @@ const mockServices: Service[] = [
   {
     id: "2",
     salon_id: "salon-1",
-    name: "Стрижка женская",
-    description: "Женская стрижка любой сложности",
+    name: "Стрижка жіноча",
+    description: "Жіноча стрижка будь-якої складності",
     duration: 90,
     price: 2500,
     is_active: true,
@@ -115,8 +115,8 @@ const mockServices: Service[] = [
   {
     id: "3",
     salon_id: "salon-1",
-    name: "Чистка лица",
-    description: "Комплексная чистка лица",
+    name: "Чистка обличчя",
+    description: "Комплексна чистка обличчя",
     duration: 120,
     price: 3500,
     is_active: true,
@@ -228,9 +228,9 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Электронный журнал</h1>
+        <h1 className="text-3xl font-bold">Електронний журнал</h1>
         <p className="text-muted-foreground">
-          Управление записями и расписанием мастеров
+          Керування записами та розкладом майстрів
         </p>
       </div>
 

@@ -113,14 +113,14 @@ export default function ServicesPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Услуги</h1>
+          <h1 className="text-3xl font-bold">Послуги</h1>
           <p className="text-muted-foreground">
-            Управление услугами и прайс-листом
+            Керування послугами и прайс-листом
           </p>
         </div>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          Добавить услугу
+          Додати послугу
         </Button>
       </div>
 
@@ -128,7 +128,7 @@ export default function ServicesPage() {
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Всего услуг</CardTitle>
+            <CardTitle className="text-sm font-medium">Всього послуг</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{services.length}</div>
@@ -140,7 +140,7 @@ export default function ServicesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {getAveragePrice().toLocaleString("ru-RU")} ₽
+              {getAveragePrice().toLocaleString("ru-RU")} ₴
             </div>
           </CardContent>
         </Card>
@@ -150,7 +150,7 @@ export default function ServicesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {Math.min(...services.map((s) => s.price)).toLocaleString("ru-RU")} ₽
+              {Math.min(...services.map((s) => s.price)).toLocaleString("ru-RU")} ₴
             </div>
           </CardContent>
         </Card>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {Math.max(...services.map((s) => s.price)).toLocaleString("ru-RU")} ₽
+              {Math.max(...services.map((s) => s.price)).toLocaleString("ru-RU")} ₴
             </div>
           </CardContent>
         </Card>
@@ -172,13 +172,13 @@ export default function ServicesPage() {
           <TableHeader>
             <TableRow>
               <TableHead>Название</TableHead>
-              <TableHead>Описание</TableHead>
-              <TableHead className="text-center">Длительность</TableHead>
-              <TableHead className="text-right">Цена</TableHead>
+              <TableHead>Опис</TableHead>
+              <TableHead className="text-center">Тривалість</TableHead>
+              <TableHead className="text-right">Ціна</TableHead>
               <TableHead className="text-right">Себестоимость</TableHead>
               <TableHead className="text-right">Маржа</TableHead>
               <TableHead className="text-center">Статус</TableHead>
-              <TableHead className="text-right">Действия</TableHead>
+              <TableHead className="text-right">Дії</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -197,10 +197,10 @@ export default function ServicesPage() {
                   </div>
                 </TableCell>
                 <TableCell className="text-right font-medium">
-                  {service.price.toLocaleString("ru-RU")} ₽
+                  {service.price.toLocaleString("ru-RU")} ₴
                 </TableCell>
                 <TableCell className="text-right text-muted-foreground">
-                  {service.cost ? `${service.cost.toLocaleString("ru-RU")} ₽` : "—"}
+                  {service.cost ? `${service.cost.toLocaleString("ru-RU")} ₴` : "—"}
                 </TableCell>
                 <TableCell className="text-right">
                   {service.cost ? (

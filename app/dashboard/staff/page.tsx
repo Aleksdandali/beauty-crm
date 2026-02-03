@@ -134,14 +134,14 @@ export default function StaffPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Сотрудники</h1>
+          <h1 className="text-3xl font-bold">Співробітники</h1>
           <p className="text-muted-foreground">
-            Управление мастерами и персоналом салона
+            Керування мастерами и персоналом салона
           </p>
         </div>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          Добавить сотрудника
+          Додати співробітника
         </Button>
       </div>
 
@@ -149,7 +149,7 @@ export default function StaffPage() {
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Всего сотрудников</CardTitle>
+            <CardTitle className="text-sm font-medium">Всього співробітников</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{staff.length}</div>
@@ -157,7 +157,7 @@ export default function StaffPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Активных</CardTitle>
+            <CardTitle className="text-sm font-medium">Активних</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -167,19 +167,19 @@ export default function StaffPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Записей сегодня</CardTitle>
+            <CardTitle className="text-sm font-medium">Записів сегодня</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12</div>
-            <p className="text-xs text-muted-foreground">Всего по салону</p>
+            <p className="text-xs text-muted-foreground">Всього по салону</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Выручка сегодня</CardTitle>
+            <CardTitle className="text-sm font-medium">Виручка сегодня</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">28,500 ₽</div>
+            <div className="text-2xl font-bold">28,500 ₴</div>
             <p className="text-xs text-muted-foreground">+15% к вчера</p>
           </CardContent>
         </Card>
@@ -229,14 +229,14 @@ export default function StaffPage() {
                     )}
                     <div className="flex items-center gap-2 text-sm">
                       <Calendar className="h-4 w-4 text-muted-foreground" />
-                      <span>Рабочих дней: {getWorkingDays(member.work_schedule)}</span>
+                      <span>Робочих днів: {getWorkingDays(member.work_schedule)}</span>
                     </div>
                   </div>
 
                   <div className="mt-4 flex items-center justify-between rounded-lg bg-muted p-3">
                     <div>
                       <p className="text-xs text-muted-foreground">
-                        Тип оплаты
+                        Тип оплати
                       </p>
                       <p className="font-medium">
                         {getSalaryTypeLabel(member.salary_type)}
@@ -247,14 +247,14 @@ export default function StaffPage() {
                       <p className="font-medium">
                         {member.salary_type === "percentage"
                           ? `${member.salary_value}%`
-                          : `${member.salary_value.toLocaleString("ru-RU")} ₽`}
+                          : `${member.salary_value.toLocaleString("ru-RU")} ₴`}
                       </p>
                     </div>
                   </div>
 
                   <div className="mt-4">
                     <Button variant="outline" className="w-full">
-                      Подробнее
+                      Детальніше
                     </Button>
                   </div>
                 </div>

@@ -24,10 +24,10 @@ const mockClients: Client[] = [
   {
     id: "1",
     salon_id: "salon-1",
-    first_name: "Ольга",
-    last_name: "Смирнова",
-    phone: "+7 (999) 111-11-11",
-    email: "olga@example.com",
+    first_name: "Олена",
+    last_name: "Коваленко",
+    phone: "+380 (67) 111-22-33",
+    email: "olena@example.com",
     date_of_birth: "1990-05-15",
     gender: "female",
     loyalty_points: 150,
@@ -35,16 +35,16 @@ const mockClients: Client[] = [
     total_spent: 15000,
     total_visits: 12,
     last_visit_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
-    notes: "Предпочитает мастера Анну",
+    notes: "Віддає перевагу майстру Анні",
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
   {
     id: "2",
     salon_id: "salon-1",
-    first_name: "Наталья",
-    last_name: "Козлова",
-    phone: "+7 (999) 222-22-22",
+    first_name: "Наталія",
+    last_name: "Шевченко",
+    phone: "+380 (50) 222-33-44",
     email: "natalia@example.com",
     date_of_birth: "1985-08-22",
     gender: "female",
@@ -59,9 +59,9 @@ const mockClients: Client[] = [
   {
     id: "3",
     salon_id: "salon-1",
-    first_name: "Екатерина",
-    last_name: "Волкова",
-    phone: "+7 (999) 333-33-33",
+    first_name: "Катерина",
+    last_name: "Бондаренко",
+    phone: "+380 (63) 333-44-55",
     email: "kate@example.com",
     date_of_birth: "1995-03-10",
     gender: "female",
@@ -76,10 +76,10 @@ const mockClients: Client[] = [
   {
     id: "4",
     salon_id: "salon-1",
-    first_name: "Ирина",
-    last_name: "Морозова",
-    phone: "+7 (999) 444-44-44",
-    email: "irina@example.com",
+    first_name: "Ірина",
+    last_name: "Мельник",
+    phone: "+380 (95) 444-55-66",
+    email: "iryna@example.com",
     date_of_birth: "1988-11-30",
     gender: "female",
     loyalty_points: 200,
@@ -87,7 +87,7 @@ const mockClients: Client[] = [
     total_spent: 25000,
     total_visits: 20,
     last_visit_date: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
-    notes: "VIP клиент, любит комплексные процедуры",
+    notes: "VIP клієнт, любить комплексні процедури",
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
@@ -141,14 +141,14 @@ export default function ClientsPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Клиенты</h1>
+          <h1 className="text-3xl font-bold">Клієнти</h1>
           <p className="text-muted-foreground">
-            Управление базой клиентов салона
+            Керування базою клієнтів салону
           </p>
         </div>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          Добавить клиента
+          Додати клієнта
         </Button>
       </div>
 
@@ -156,7 +156,7 @@ export default function ClientsPage() {
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Всего клиентов</CardTitle>
+            <CardTitle className="text-sm font-medium">Всього клієнтів</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{clients.length}</div>
@@ -164,16 +164,16 @@ export default function ClientsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Новых за месяц</CardTitle>
+            <CardTitle className="text-sm font-medium">Нових за місяць</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">8</div>
-            <p className="text-xs text-muted-foreground">+20% к прошлому</p>
+            <p className="text-xs text-muted-foreground">+20% до минулого</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">VIP клиенты</CardTitle>
+            <CardTitle className="text-sm font-medium">VIP клієнти</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -183,11 +183,11 @@ export default function ClientsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Средний чек</CardTitle>
+            <CardTitle className="text-sm font-medium">Середній чек</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">2,850 ₽</div>
-            <p className="text-xs text-muted-foreground">+5% к прошлому</p>
+            <div className="text-2xl font-bold">2,850 ₴</div>
+            <p className="text-xs text-muted-foreground">+5% до минулого</p>
           </CardContent>
         </Card>
       </div>
@@ -197,7 +197,7 @@ export default function ClientsPage() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Поиск по имени, телефону или email..."
+            placeholder="Пошук за ім'ям, телефоном або email..."
             className="pl-9"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -210,12 +210,12 @@ export default function ClientsPage() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Клиент</TableHead>
-              <TableHead>Контакты</TableHead>
-              <TableHead>Программа лояльности</TableHead>
-              <TableHead>Визиты</TableHead>
-              <TableHead>Потрачено</TableHead>
-              <TableHead>Последний визит</TableHead>
+              <TableHead>Клієнт</TableHead>
+              <TableHead>Контакти</TableHead>
+              <TableHead>Програма лояльності</TableHead>
+              <TableHead>Візити</TableHead>
+              <TableHead>Витрачено</TableHead>
+              <TableHead>Останній візит</TableHead>
               <TableHead></TableHead>
             </TableRow>
           </TableHeader>
@@ -268,12 +268,12 @@ export default function ClientsPage() {
                 <TableCell>
                   <div className="text-center">
                     <div className="font-medium">{client.total_visits}</div>
-                    <div className="text-xs text-muted-foreground">визитов</div>
+                    <div className="text-xs text-muted-foreground">візитів</div>
                   </div>
                 </TableCell>
                 <TableCell>
                   <div className="font-medium">
-                    {client.total_spent.toLocaleString("ru-RU")} ₽
+                    {client.total_spent.toLocaleString("ru-RU")} ₴
                   </div>
                 </TableCell>
                 <TableCell>
@@ -288,7 +288,7 @@ export default function ClientsPage() {
                 </TableCell>
                 <TableCell>
                   <Button variant="ghost" size="sm">
-                    Подробнее
+                    Детальніше
                   </Button>
                 </TableCell>
               </TableRow>

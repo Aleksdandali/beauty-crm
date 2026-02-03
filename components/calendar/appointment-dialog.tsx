@@ -108,19 +108,19 @@ export function AppointmentDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Новая запись</DialogTitle>
+          <DialogTitle>Новий запис</DialogTitle>
           <DialogDescription>
-            Создайте новую запись для клиента
+            Створіть новий запис для клієнта
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
           <div className="grid gap-4 py-4">
             {/* Client Selection */}
             <div className="grid gap-2">
-              <Label htmlFor="client">Клиент *</Label>
+              <Label htmlFor="client">Клієнт *</Label>
               <Select value={clientId} onValueChange={setClientId}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Выберите клиента" />
+                  <SelectValue placeholder="Оберіть клієнта" />
                 </SelectTrigger>
                 <SelectContent>
                   {clients.map((client) => (
@@ -134,10 +134,10 @@ export function AppointmentDialog({
 
             {/* Staff Selection */}
             <div className="grid gap-2">
-              <Label htmlFor="staff">Мастер *</Label>
+              <Label htmlFor="staff">Майстер *</Label>
               <Select value={staffId} onValueChange={setStaffId}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Выберите мастера" />
+                  <SelectValue placeholder="Оберіть майстра" />
                 </SelectTrigger>
                 <SelectContent>
                   {staff.map((member) => (
@@ -151,15 +151,15 @@ export function AppointmentDialog({
 
             {/* Service Selection */}
             <div className="grid gap-2">
-              <Label htmlFor="service">Услуга *</Label>
+              <Label htmlFor="service">Послуга *</Label>
               <Select value={serviceId} onValueChange={setServiceId}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Выберите услугу" />
+                  <SelectValue placeholder="Оберіть послугу" />
                 </SelectTrigger>
                 <SelectContent>
                   {services.map((service) => (
                     <SelectItem key={service.id} value={service.id}>
-                      {service.name} - {service.duration} мин - {service.price} ₽
+                      {service.name} - {service.duration} хв - {service.price} ₴
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -180,7 +180,7 @@ export function AppointmentDialog({
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {date ? format(date, "PPP", { locale: ru }) : "Выберите дату"}
+                      {date ? format(date, "PPP", { locale: ru }) : "Оберіть дату"}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0">
@@ -195,7 +195,7 @@ export function AppointmentDialog({
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="time">Время *</Label>
+                <Label htmlFor="time">Час *</Label>
                 <Input
                   id="time"
                   type="time"
@@ -209,22 +209,22 @@ export function AppointmentDialog({
             {selectedService && (
               <div className="rounded-lg bg-muted p-4">
                 <div className="flex justify-between text-sm">
-                  <span>Длительность:</span>
-                  <span className="font-medium">{selectedService.duration} минут</span>
+                  <span>Тривалість:</span>
+                  <span className="font-medium">{selectedService.duration} хвилин</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span>Стоимость:</span>
-                  <span className="font-medium">{price} ₽</span>
+                  <span>Вартість:</span>
+                  <span className="font-medium">{price} ₴</span>
                 </div>
               </div>
             )}
 
             {/* Notes */}
             <div className="grid gap-2">
-              <Label htmlFor="notes">Заметки мастера</Label>
+              <Label htmlFor="notes">Нотатки майстра</Label>
               <Textarea
                 id="notes"
-                placeholder="Дополнительная информация для мастера..."
+                placeholder="Додаткова інформація для майстра..."
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 rows={2}
@@ -232,10 +232,10 @@ export function AppointmentDialog({
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="clientNotes">Пожелания клиента</Label>
+              <Label htmlFor="clientNotes">Побажання клієнта</Label>
               <Textarea
                 id="clientNotes"
-                placeholder="Особые пожелания клиента..."
+                placeholder="Особливі побажання клієнта..."
                 value={clientNotes}
                 onChange={(e) => setClientNotes(e.target.value)}
                 rows={2}
@@ -249,9 +249,9 @@ export function AppointmentDialog({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Отмена
+              Скасувати
             </Button>
-            <Button type="submit">Создать запись</Button>
+            <Button type="submit">Створити запис</Button>
           </DialogFooter>
         </form>
       </DialogContent>

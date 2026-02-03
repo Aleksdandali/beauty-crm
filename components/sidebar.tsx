@@ -15,14 +15,14 @@ import {
 import { cn } from "@/lib/utils"
 
 const navigation = [
-  { name: "Календарь", href: "/dashboard", icon: Calendar },
-  { name: "Клиенты", href: "/dashboard/clients", icon: Users },
-  { name: "Услуги", href: "/dashboard/services", icon: Scissors },
-  { name: "Сотрудники", href: "/dashboard/staff", icon: UserCircle },
+  { name: "Календар", href: "/dashboard", icon: Calendar },
+  { name: "Клієнти", href: "/dashboard/clients", icon: Users },
+  { name: "Послуги", href: "/dashboard/services", icon: Scissors },
+  { name: "Співробітники", href: "/dashboard/staff", icon: UserCircle },
   { name: "Склад", href: "/dashboard/inventory", icon: Package },
-  { name: "Финансы", href: "/dashboard/finance", icon: DollarSign },
-  { name: "Аналитика", href: "/dashboard/analytics", icon: BarChart3 },
-  { name: "Настройки", href: "/dashboard/settings", icon: Settings },
+  { name: "Фінанси", href: "/dashboard/finance", icon: DollarSign },
+  { name: "Аналітика", href: "/dashboard/analytics", icon: BarChart3 },
+  { name: "Налаштування", href: "/dashboard/settings", icon: Settings },
 ]
 
 export function Sidebar() {

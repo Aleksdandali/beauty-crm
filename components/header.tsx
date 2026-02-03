@@ -20,7 +20,7 @@ export function Header() {
         <div className="relative w-96">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Поиск клиентов, записей..."
+            placeholder="Пошук клієнтів, записів..."
             className="pl-9"
           />
         </div>
@@ -39,12 +39,12 @@ export function Header() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Мой аккаунт</DropdownMenuLabel>
+            <DropdownMenuLabel>Мій акаунт</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Профиль</DropdownMenuItem>
-            <DropdownMenuItem>Настройки</DropdownMenuItem>
+            <DropdownMenuItem>Профіль</DropdownMenuItem>
+            <DropdownMenuItem>Налаштування</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Выход</DropdownMenuItem>
+            <DropdownMenuItem>Вихід</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

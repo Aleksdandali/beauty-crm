@@ -66,12 +66,12 @@ export function AppointmentCalendar({
 
   const getStatusLabel = (status: string) => {
     const labels: Record<string, string> = {
-      scheduled: "Запланировано",
-      confirmed: "Подтверждено",
-      in_progress: "В процессе",
+      scheduled: "Заплановано",
+      confirmed: "Підтверджено",
+      in_progress: "Виконується",
       completed: "Завершено",
-      cancelled: "Отменено",
-      no_show: "Не пришел",
+      cancelled: "Скасовано",
+      no_show: "Не прийшов",
     }
     return labels[status] || status
   }
@@ -92,8 +92,8 @@ export function AppointmentCalendar({
             variant="outline"
             onClick={() => setCurrentDate(new Date())}
           >
-            Сегодня
-          </Button>
+                  Сьогодні
+                </Button>
           <Button
             variant="outline"
             size="icon"
@@ -107,7 +107,7 @@ export function AppointmentCalendar({
         </h2>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          Новая запись
+          Новий запис
         </Button>
       </div>
 
@@ -118,7 +118,7 @@ export function AppointmentCalendar({
             {/* Header with days */}
             <div className="flex border-b bg-muted/50">
               <div className="w-32 flex-shrink-0 border-r p-2 text-sm font-medium">
-                Мастер
+                Майстер
               </div>
               {days.map((day) => (
                 <div
@@ -220,17 +220,17 @@ export function AppointmentCalendar({
       <div className="flex flex-wrap gap-4 text-sm">
         <div className="flex items-center gap-2">
           <Badge variant="outline" className="bg-blue-100 text-blue-800">
-            Запланировано
+            Заплановано
           </Badge>
         </div>
         <div className="flex items-center gap-2">
           <Badge variant="outline" className="bg-green-100 text-green-800">
-            Подтверждено
+            Підтверджено
           </Badge>
         </div>
         <div className="flex items-center gap-2">
           <Badge variant="outline" className="bg-yellow-100 text-yellow-800">
-            В процессе
+            Виконується
           </Badge>
         </div>
         <div className="flex items-center gap-2">
